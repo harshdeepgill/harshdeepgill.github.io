@@ -1,16 +1,21 @@
-import React from 'react'
+import React from 'react';
+import { useSelector } from 'react-redux';
+import styled from "styled-components";
 
 const Home = () => {
-  return (
-    <div className='nav-link home home-main'>
-        
 
+  const scrollFr = useSelector(store => store.scrollFr)
+
+  console.log(scrollFr)
+
+  return (
+    <DIV opacity={Math.min(scrollFr*3.7, 1)}  className='nav-link home home-main'>
 
       <div className='home-main__content'>
         <div className='home-main__content_1'>
           <div className='home-main__content_1--big_text'>
-            <span>Gill</span>
-            <span>Harshdeep</span>
+            <SPAN1 span1={13-(Math.min(43.33*scrollFr, 13))}>Gill</SPAN1>
+            <SPAN2 span2={-15+(Math.min(66.67*scrollFr, 20))}>Harshdeep</SPAN2>
           </div>
         </div>
         
@@ -24,22 +29,23 @@ const Home = () => {
         </div>
       </div>
 
-
-      
-
-      {/* <div className="home-main__content-primary">
-            <div className="home-main__content-secondary-1">
-                <div className="home-main__content-secondary-1--big-text">
-                    <span >Gill</span>
-                    <span >Harshdeep</span>
-                </div>
-            </div>
-            <div className="home-main__content-secondary-2">
-
-            </div>
-        </div> */}
-    </div>
+    </DIV>
   )
 }
 
 export default Home
+
+const DIV = styled.div`
+  background-color: rgba(22,22,22, ${props => props.opacity});
+`
+
+const SPAN1 = styled.span`
+  transition: all 350ms ease;
+  transform: translateX(${props => props.span1}%);
+` 
+
+
+const SPAN2 = styled.span`
+  transition: all 250ms ease;
+  transform: translateX(${props => props.span2}%);
+`

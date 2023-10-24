@@ -1,0 +1,113 @@
+.about-main{
+    padding: 45vh 0 5vh 0;
+    background-color: $black-dark;
+
+    &>p{
+        text-transform: uppercase;
+        text-align: center;
+        color: $color-secondary;
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+        line-height: 1.4;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    &__stats{
+        display: flex;
+        width: 60%;
+        margin: 0 auto;
+        justify-content: space-between;
+        margin-top: 3rem;
+
+        &__data{
+            text-align: center;
+
+            &__number{
+                font-size: 2.5rem;
+                color: $color-primary;
+                letter-spacing: 2px;
+            }
+
+            &__heading{
+                font-size: 1.2rem;
+                color: $color-secondary;
+                letter-spacing: 2px;
+                margin-top: 0.6rem;
+            }
+        }
+    }
+
+    &__secondary-heading{
+
+        &>p{
+            text-transform: uppercase;
+            margin-left: 2.5%;
+            color: $color-primary;
+            font-size: 1.6rem;
+            letter-spacing: 2px;
+        }
+    }
+
+    &__edu-table{
+        margin-bottom: 10rem;
+
+        &__header{
+            width: 95%;
+            margin: 0 auto;
+            margin-top: 2rem;
+            padding: 3rem 2rem;
+            display: flex;
+            border-bottom: 1px solid rgb(205,205,205,0.4);
+            
+
+            &>p{
+                color: $color-secondary;
+                text-transform: uppercase;
+                font-size: 1.4rem;
+                letter-spacing: 2px;
+
+            }
+
+            &>p:nth-child(1){
+                width: 40%;
+            }
+            &>p:nth-child(2){
+                width: 35%;
+            }
+            &>p:nth-child(3){
+                width: 25%;
+                text-align: right;
+            }
+        }
+
+        &__data{
+            width: 95%;
+            margin: 0 auto;
+            margin-top: 2rem;
+            padding: 3rem 2rem;
+            display: flex;
+            border-bottom: 1px solid rgb(205,205,205,0.4);
+            
+
+            &>p{
+                color: $color-secondary;
+                text-transform: uppercase;
+                font-size: 1.6rem;
+                letter-spacing: 2px;
+
+            }
+
+            &>p:nth-child(1){
+                width: 40%;
+            }
+            &>p:nth-child(2){
+                width: 35%;
+            }
+            &>p:nth-child(3){
+                width: 25%;
+                text-align: right;
+            }
+        }
+    }
+}

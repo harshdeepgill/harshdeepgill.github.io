@@ -1,0 +1,27 @@
+.ho_sc_main{
+    overflow: hidden;
+    padding: 6rem 0;
+    white-space: nowrap;
+
+    &__outer{
+        animation: 40s slide infinite linear;
+        display: inline-block;
+
+        &__inner{
+            display: flex;
+            & > div{
+                margin: 0 4rem;
+            }
+
+        }
+    }
+}
+
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
