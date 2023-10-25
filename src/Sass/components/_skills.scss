@@ -1,6 +1,7 @@
 .skills-main{
     background-color: $black-dark;
     padding: 0 5%;
+    padding-top: 8rem;
 
     &__grid-single{
         max-width: 114rem;
@@ -73,7 +74,13 @@
         }
 
         &__col-2{
+            width: 48.5%;
+            &__img{
 
+                &>img{
+                    width: 100%;
+                }
+            }
         }
 
     }

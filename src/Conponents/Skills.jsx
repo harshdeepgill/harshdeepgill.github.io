@@ -1,6 +1,8 @@
 import React from 'react'
 import Heading from './Sub_Components/Heading'
 import RoundLogo from './Sub_Components/RoundLogo';
+import styled from "styled-components";
+import {useSelector} from "react-redux";
 
 const techStack = [
     {
@@ -120,8 +122,12 @@ const tools = [
 ]
 
 const Skills = () => {
+
+    const scrollFr = useSelector(store => store.scrollFr);
+
+
   return (
-    <div className='nav-link skills skills-main'>
+    <div id="skills" className='nav-link skills skills-main'>
         <Heading text={"My"} colorText={"Skills"}/>
 
         <div className="skills-main__grid-single">
@@ -137,7 +143,9 @@ const Skills = () => {
                 <p>UI Frameworks</p>
             </div>
             <div className="skills-main__grid-doubble__col-2">
-
+                <IMG spinVal={scrollFr*80} className="skills-main__grid-doubble__col-2__img">
+                    <img  src="https://firebasestorage.googleapis.com/v0/b/harshdeep-gill-portfolio-websi.appspot.com/o/sun%20vector%20(2).png?alt=media&token=b8911eb8-5327-4622-a49e-ef79b0150361&_gl=1*1ik8rkz*_ga*OTcyNzU4NTcxLjE2OTQxMjAyNjM.*_ga_CW55HF8NVT*MTY5ODIxMDgzNy40MC4xLjE2OTgyMTEyOTguNDkuMC4w" alt="" />
+                </IMG>
             </div>
         </div>
 
@@ -153,3 +161,10 @@ const Skills = () => {
 }
 
 export default Skills
+
+const IMG = styled.div`
+    width: 57%;
+    margin: 0 auto;
+    transition: all 300ms ease ;
+    transform: rotate(${props => props.spinVal}deg);
+`

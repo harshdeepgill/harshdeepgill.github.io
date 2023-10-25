@@ -9,13 +9,13 @@ const Home = () => {
   console.log(scrollFr)
 
   return (
-    <DIV opacity={Math.min(scrollFr*3.7, 1)}  className='nav-link home home-main'>
+    <DIV opacity={Math.min(scrollFr*3.7, 1)} id='home'  className='nav-link home home-main'>
 
       <div className='home-main__content'>
         <div className='home-main__content_1'>
           <div className='home-main__content_1--big_text'>
-            <SPAN1 span1={13-(Math.min(43.33*scrollFr, 13))}>Gill</SPAN1>
-            <SPAN2 span2={-15+(Math.min(66.67*scrollFr, 20))}>Harshdeep</SPAN2>
+            <span span={13-(Math.min(43.33*scrollFr, 13))}>Gill</span>
+            <SPAN2 span2={-15+(Math.min(66.67*scrollFr, 22))}>Harshdeep</SPAN2>
           </div>
         </div>
         
@@ -39,10 +39,10 @@ const DIV = styled.div`
   background-color: rgba(22,22,22, ${props => props.opacity});
 `
 
-const SPAN1 = styled.span`
-  transition: all 350ms ease;
-  transform: translateX(${props => props.span1}%);
-` 
+// const SPAN1 = styled.span`
+//   transition: all 350ms ease;
+//   transform: translateX(${props => props.span1}%);
+// ` 
 
 
 const SPAN2 = styled.span`

@@ -6,6 +6,7 @@ import Navbar from "./Conponents/Navbar";
 import "./Sass/main.scss"
 import About from "./Conponents/About";
 import Skills from "./Conponents/Skills";
+import Projects from "./Conponents/Projects";
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
       <Home/>
       <About/>
       <Skills/>
+      <Projects/>
     </div>
   );
 }

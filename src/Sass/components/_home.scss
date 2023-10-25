@@ -22,6 +22,7 @@
                 &>span:nth-child(1){
                     color: $color-secondary;
                     display: block;
+                    transform: translateX(15%);
                 }
                 &>span:nth-child(2){
                     color: $color-tertiary;
