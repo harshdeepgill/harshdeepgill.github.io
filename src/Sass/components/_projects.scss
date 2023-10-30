@@ -1,21 +1,111 @@
 .project-main{
+    padding-top: 8rem;
+    background-color: $black-dark;
     
     &__row-1{
         margin: 0 auto;
         max-width: 114rem;
         display: flex;
-        gap: 4rem;
+        gap: 3rem;
+        height: 85vh;
+        margin-bottom: 3rem;
 
         &__col-1{
             width: 40rem;
-            height: 50px;
+            height: 100%;
             background-color: #fff;
+            border-radius: 20px;
         }
 
         &__col-2{
-            width: 70rem;
-            height: 50px;
+            width: 71rem;
+            height: 100%;
+            background-image: url("https://firebasestorage.googleapis.com/v0/b/harshdeep-gill-portfolio-websi.appspot.com/o/screencapture-decisive-duck-1364-9rnayblsd-vk10082000-vercel-app-2023-10-26-17_54_23.png?alt=media&token=fe25a2b5-651c-4ab0-bf08-8d6c9708e7b6&_gl=1*dr2dt2*_ga*OTcyNzU4NTcxLjE2OTQxMjAyNjM.*_ga_CW55HF8NVT*MTY5ODY3MzAyOC40NC4xLjE2OTg2NzMwNjUuMjMuMC4w");
+            background-size: cover;
+            background-position: top;
+            border-radius: 20px;
+            border: 2px solid $color-secondary;
+            transition: all 6s ease;
+
+            &__git{
+                
+            }
+            &__link{
+
+            }
+
+            &:hover {
+                background-position: bottom;
+            }
+        }
+    }
+
+
+    &__row-2{
+        margin: 0 auto;
+        max-width: 114rem;
+        display: flex;
+        gap: 3rem;
+        height: 50rem;
+        margin-bottom: 3rem;
+
+        &__col-1{
+            width: 50rem;
+            clip-path: circle(50% at 50% 50%);
+            background-color: $color-primary;
+        }
+        &__col-2{
+            min-width: 29rem;
+            height: 100%;
+            border-radius: 20px;
+            border: 2px solid $color-secondary;
+            background-image: url("https://firebasestorage.googleapis.com/v0/b/harshdeep-gill-portfolio-websi.appspot.com/o/screencapture-hilarious-paletas-40d5fe-netlify-app-2023-10-30-20_01_33.png?alt=media&token=ede55c9e-dd21-4890-bf32-ccf9d92c3e45&_gl=1*1g27xaq*_ga*OTcyNzU4NTcxLjE2OTQxMjAyNjM.*_ga_CW55HF8NVT*MTY5ODY3NjMwOS40NS4xLjE2OTg2NzYzMzEuMzguMC4w");
+            background-size: cover;
+            background-position: top;
+            border-radius: 20px;
+            transition: all 4s ease;
+
+            &:hover {
+                background-position: bottom;
+            }
+        }
+        &__col-3{
+            min-width: 29rem;
+            height: 100%;
+            border-radius: 20px;
             background-color: #fff;
+        }
+    }
+
+
+    &__row-3{
+        margin: 0 auto;
+        max-width: 114rem;
+        display: flex;
+        gap: 3rem;
+        height: 75vh;
+        margin-bottom: 3rem;
+
+        &__col-1{
+            width: 46rem ;
+            height: 100%;
+            background-color: #fff;
+            border-radius: 20px;
+        }
+
+        &__col-2{
+            width: 65rem ;
+            height: 100%;
+            border: 2px solid $color-secondary;
+            background-image: url("https://firebasestorage.googleapis.com/v0/b/harshdeep-gill-portfolio-websi.appspot.com/o/screencapture-127-0-0-1-5500-index-html-2023-10-30-20_33_49.png?alt=media&token=c7ae4037-03f8-402f-acac-b56f100b745a&_gl=1*1hoeces*_ga*OTcyNzU4NTcxLjE2OTQxMjAyNjM.*_ga_CW55HF8NVT*MTY5ODY3ODI1MC40Ni4xLjE2OTg2NzgyNjUuNDUuMC4w");
+            background-size: cover;
+            background-position: top;
+            border-radius: 20px;
+            transition: all 9s ease;
+
+            &:hover {
+                background-position: bottom;
+            }
         }
     }
 }

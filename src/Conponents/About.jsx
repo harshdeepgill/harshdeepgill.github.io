@@ -43,7 +43,7 @@ const variable = [
 
 const About = () => {
   return (
-    <div id="about" className='nav-link about about-main'>
+    <div id="about" className='about-main'>
         <Heading text={"About"} colorText={"me"}/>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi possimus in nam rem veniam labore tempora id unde excepturi reprehenderit quibusdam assumenda, harum exercitationem earum voluptatibus, perspiciatis, ea ad voluptatem ipsa. Tempora voluptatum tenetur eveniet voluptates quam sit temporibus cupiditate.
