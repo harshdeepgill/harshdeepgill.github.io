@@ -1,4 +1,3 @@
-
 import { useDispatch } from "react-redux";
 import HeaderImage from "./Conponents/HeaderImage";
 import Home from "./Conponents/Home";
@@ -7,6 +6,7 @@ import "./Sass/main.scss"
 import About from "./Conponents/About";
 import Skills from "./Conponents/Skills";
 import Projects from "./Conponents/Projects";
+import Github from "./Conponents/Github";
 
 function App() {
 
@@ -29,6 +29,7 @@ function App() {
       <About/>
       <Skills/>
       <Projects/>
+      <Github/>
     </div>
   );
 }
