@@ -15,9 +15,9 @@ const Projects = () => {
     <div id='projects' className='project-main'>
         <Heading text={"My"} colorText={"Projects"}/>
 
-        <div className="project-main__row-1">
+        <div className="project-card project-main__row-1">
 
-            <div className="project-card project-main__row-1__col-1">
+            <div className="project-main__row-1__col-1">
                 <div>
                     <h2 className='project-title' style={{textAlign:"center", letterSpacing:"3px"}}>#ONFLICK</h2>
                     <p className='project-description'>Onflick is a ecommerce website which allows user to create account, whish list, add to cart and experiance smooth intrface.</p>
@@ -47,7 +47,7 @@ const Projects = () => {
 
 
 
-        <div className="project-main__row-2">
+        <div className="project-card project-main__row-2">
 
             <DIV spinVal={scrollFr*55} className="project-main__row-2__col-1">
                 <div>
@@ -66,7 +66,7 @@ const Projects = () => {
                 </div>
             </div>
 
-            <div className="project-card project-main__row-2__col-3">
+            <div className="project-main__row-2__col-3">
             <div>
                     <h2 className='project-title' style={{textAlign:"center", letterSpacing:"3px"}}>#WandaWe</h2>
                     <p className='project-description'>Wanda We is a travel booking website which offers vairous packages and alow user to filter and sort products.</p>
@@ -82,11 +82,11 @@ const Projects = () => {
         </div>
 
 
-        <div className="project-main__row-3">
+        <div className="project-card project-main__row-3">
 
             
 
-            <div className="project-card project-main__row-3__col-1">
+            <div className="project-main__row-3__col-1">
             <div>
                     <h2 className='project-title' style={{textAlign:"center", letterSpacing:"3px"}}>#MoneyMingle</h2>
                     <p className='project-description'>Money Mingle is a Fin-Tech website which allows user to make transactions in vairous currencies, along with money conversion functionalities. Also we provide a dashboard to manage expenses.</p>
@@ -110,11 +110,11 @@ const Projects = () => {
                 </div>
             </div>
         </div>
-        <div className="project-main__row-3">
+        <div className="project-card project-main__row-3">
 
             
 
-            <div className="project-card project-main__row-3__col-1">
+            <div className="project-main__row-3__col-1">
             <div>
                     <h2 className='project-title' style={{textAlign:"center", letterSpacing:"3px"}}>#MoneyMingle</h2>
                     <p className='project-description'>Money Mingle is a Fin-Tech website which allows user to make transactions in vairous currencies, along with money conversion functionalities. Also we provide a dashboard to manage expenses.</p>

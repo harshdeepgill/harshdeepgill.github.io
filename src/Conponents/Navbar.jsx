@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { BsDownload } from "react-icons/bs";
+import resume from "../Sass/resume.pdf";
 
 
 const Navbar = () => {
@@ -13,7 +14,7 @@ const Navbar = () => {
       <a className="nav-link skills" href="#skills">Skills</a>
       <a className="nav-link projects" href="#projects">Projects</a>
       <a className="nav-link contact" href="#contact">Contact</a>
-      <BUTTON href="#" onClick={() => { window.open(`https://firebasestorage.googleapis.com/v0/b/harshdeep-gill-portfolio-websi.appspot.com/o/Harshdeep%20Gill-Full%20Stack%20Web%20Developer%20(1).pdf?alt=media&token=9a8ba35f-77bb-4c95-b278-0c7a3c349109&_gl=1*1j2wsi6*_ga*OTcyNzU4NTcxLjE2OTQxMjAyNjM.*_ga_CW55HF8NVT*MTY5OTAzNTA0Mi42My4xLjE2OTkwMzUwODcuMTUuMC4w`, "_blank"); }} className="nav-link resume"  id="resume-button-1"><p>Resume</p> <BsDownload/></BUTTON>
+      <BUTTON className="nav-link resume"  id="resume-button-1"><a href={resume} target="_blank" download="resume" rel="noopener noreferrer" id="resume-link-1"><p>Resume</p> <BsDownload/></a></BUTTON>
     </div>
   );
 };
