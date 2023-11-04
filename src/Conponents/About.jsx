@@ -75,7 +75,7 @@ const About = () => {
         </HorizontalScroll>
 
         <div>
-        <BUTTON id="resume-button-2" onClick={() => { window.open(resume, "_blank"); }}><p>Resume</p> <BsDownload/></BUTTON>
+        <BUTTON id="resume-button-2" onClick={() => { window.open(resume, "_blank"); }}><a href='#'  id="resume-link-2"><p>Resume</p> <BsDownload/></a></BUTTON>
         </div>
 
         <div className="about-main__secondary-heading">
