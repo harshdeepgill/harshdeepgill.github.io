@@ -7,6 +7,7 @@ import About from "./Conponents/About";
 import Skills from "./Conponents/Skills";
 import Projects from "./Conponents/Projects";
 import Github from "./Conponents/Github";
+import Contact from "./Conponents/Contact";
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
       <Skills/>
       <Projects/>
       <Github/>
+      <Contact/>
     </div>
   );
 }

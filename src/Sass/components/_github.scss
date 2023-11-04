@@ -1,0 +1,18 @@
+.github-main{
+    background-color: $black-dark;
+    &__outer{
+        padding: 0 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+        justify-content: center;
+
+        &__inner{
+            min-width: 40rem;
+
+            & img{
+                width: 100%;
+            }
+        }
+    }
+}

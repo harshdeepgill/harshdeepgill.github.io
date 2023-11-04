@@ -1,16 +1,17 @@
 .navbar-main{
-    padding: 3rem 3rem 3rem 3rem;
+    padding: 2rem 3rem 2rem 3rem;
     width: 100vw;
     z-index: 2;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-image: linear-gradient(to bottom, rgba(22,22,22), rgba(22,22,22,0));
     position: fixed;
+    font-family: MyFontThick;
     a{
         text-decoration: none;
         text-transform: uppercase;
-        font-size: 1.4rem;
-        letter-spacing: 2px;
+        font-size: 1.2rem;
 
         &:not(:first-child){
             color: $color-secondary;

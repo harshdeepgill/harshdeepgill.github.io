@@ -4,6 +4,7 @@ import RoundLogo from './Sub_Components/RoundLogo';
 import styled from "styled-components";
 import {useSelector} from "react-redux";
 
+
 const techStack = [
     {
         source: "https://cdn.icon-icons.com/icons2/2415/PNG/512/react_original_logo_icon_146374.png",
@@ -127,7 +128,7 @@ const Skills = () => {
 
 
   return (
-    <div id="skills" className='nav-link skills skills-main'>
+    <div id="skills" className='skills-main'>
         <Heading text={"My"} colorText={"Skills"}/>
 
         <div className="skills-main__grid-single">

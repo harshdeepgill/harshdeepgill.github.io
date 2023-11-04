@@ -2,6 +2,9 @@ import React from 'react'
 import Heading from './Sub_Components/Heading'
 import HorizontalScroll from './Sub_Components/HorizontalScroll'
 import GreyLogo from './Sub_Components/GreyLogo'
+import styled from 'styled-components';
+import { BsDownload } from "react-icons/bs";
+import resume from "../Sass/resume.pdf"
 
 const variable = [
     {
@@ -45,8 +48,8 @@ const About = () => {
   return (
     <div id="about" className='about section about-main'>
         <Heading text={"About"} colorText={"me"}/>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi possimus in nam rem veniam labore tempora id unde excepturi reprehenderit quibusdam assumenda, harum exercitationem earum voluptatibus, perspiciatis, ea ad voluptatem ipsa. Tempora voluptatum tenetur eveniet voluptates quam sit temporibus cupiditate.
+        <p id="user-detail-intro">
+        A dedicated fullstack web developer, I bring passion, lifelong learning, and proficiency in the MERN stack to the table. My focus is on crafting robust, functional, and user-centric websites having attention to detail and a problem-solving mindset with hands-on experience on Git for version control. Quality and solution driven, skilled in and having hands-on experience of working with HTML, CSS, JavaScript, React, NodeJS and MongoDB. Highly resilient and focused on learning new techniques to build real world websites while facilitating the growth of self and that of the organization.
         </p>
 
         <div className='about-main__stats'>
@@ -70,6 +73,10 @@ const About = () => {
         <HorizontalScroll>
             {variable.map((el, index) => <GreyLogo key={index} {...el}/> )}
         </HorizontalScroll>
+
+        <div>
+        <BUTTON id="resume-button-2" onClick={() => { window.open(resume, "_blank"); }}><p>Resume</p> <BsDownload/></BUTTON>
+        </div>
 
         <div className="about-main__secondary-heading">
             <p>Education</p>
@@ -135,3 +142,27 @@ const About = () => {
 }
 
 export default About
+
+const BUTTON = styled.button`
+margin: 0 auto;
+margin-bottom: 5rem;
+text-align: center;
+    display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 2rem 2.5rem 2rem 2.5rem;
+  font-size: 1.6rem;
+  border-radius: 10px;
+  background-color: white;
+  color: rgb(22,22,22);
+  border: none;
+  outline: none;
+  font-family: inherit;
+  text-transform: uppercase;
+
+  &:hover {
+    box-shadow: 0px 3px 10px rgb(220,252,55);
+    transform: translateY(-5px);
+    cursor: pointer;
+  }
+`

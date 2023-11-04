@@ -1,0 +1,41 @@
+.rd-logo-sm{
+    display: inline-block;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+    &__outer{
+        width: 7rem;
+        height: 7rem;
+        clip-path: circle(50% at 50% 50%);
+        position: relative;
+        background-color: $color-secondary;
+        
+
+        &>img{
+            width: 100%;
+            transform: scale(0.8);
+            transition: all 0.5s;
+        }
+        &>figcaption{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 20%);
+            color: $black-dark;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            opacity: 0;
+            transition: all 0.5s;
+            backface-visibility: hidden;
+        }
+        &:hover &__cap{
+            opacity: 1;
+            transform: translate(-50% ,-50%);
+        }
+        &:hover &__img{
+            transform: scale(0.75);
+            filter: blur(3px);
+        }
+    }
+
+}
