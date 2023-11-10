@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d78baadb.css",
-    "main.js": "/static/js/main.66883abe.js",
+    "main.css": "/static/css/main.74524f81.css",
+    "main.js": "/static/js/main.fee80bb9.js",
     "static/js/787.d143a821.chunk.js": "/static/js/787.d143a821.chunk.js",
     "static/media/resume.pdf": "/static/media/resume.95e69a0d18d86ffac691.pdf",
     "static/media/monument-extended-2.ttf": "/static/media/monument-extended-2.7f711aab1c8bdac37de5.ttf",
@@ -9,12 +9,12 @@
     "static/media/MonumentExtended-Regular.otf": "/static/media/MonumentExtended-Regular.db74f7a563ec017311bc.otf",
     "static/media/MonumentExtended-Ultrabold.otf": "/static/media/MonumentExtended-Ultrabold.9db16afed1996befff6b.otf",
     "index.html": "/index.html",
-    "main.d78baadb.css.map": "/static/css/main.d78baadb.css.map",
-    "main.66883abe.js.map": "/static/js/main.66883abe.js.map",
+    "main.74524f81.css.map": "/static/css/main.74524f81.css.map",
+    "main.fee80bb9.js.map": "/static/js/main.fee80bb9.js.map",
     "787.d143a821.chunk.js.map": "/static/js/787.d143a821.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d78baadb.css",
-    "static/js/main.66883abe.js"
+    "static/css/main.74524f81.css",
+    "static/js/main.fee80bb9.js"
   ]
 }
