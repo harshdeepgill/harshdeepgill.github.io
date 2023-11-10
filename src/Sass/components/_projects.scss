@@ -4,11 +4,14 @@
     
     &__row-1{
         margin: 0 auto;
+        padding: 0 3rem;
         max-width: 114rem;
         display: flex;
         gap: 3rem;
         height: 85vh;
         margin-bottom: 3rem;
+
+        
 
         &__col-1{
             width: 40rem;
@@ -65,11 +68,25 @@
                 background-position: bottom;
             }
         }
+        @media screen and (max-width: 768px) {
+            &__col-1{
+                width: 100%;
+            }
+            &__col-2{
+                width: 100%;
+            }
+        }
+    }
+    @media screen and (max-width:768px) {
+        &__row-1{
+            flex-direction: column-reverse;
+        }
     }
 
 
     &__row-2{
         margin: 0 auto;
+        padding: 0 3rem;
         max-width: 114rem;
         display: flex;
         gap: 3rem;
@@ -78,18 +95,23 @@
 
         &__col-1{
             width: 50rem;
+            height: 100%;
             clip-path: circle(50% at 50% 50%);
             background-color: $color-primary;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
+            font-family: MyFontThin;
+            font-size: 2rem;
             &>div{
 
                 &>h1{
                     margin-top: 5rem;
-                    font-family: MyFontThin;
-                    font-size: 3rem;
+                    &>a{
+                        text-decoration: none;
+                        color: $black-dark;
+                    }
                 }
             }
         }
@@ -150,9 +172,31 @@
         }
     }
 
+    @media screen and (max-width:768px) {
+        &__row-2{
+            flex-direction: column;
+            height: auto;
+
+            &__col-1{
+                max-width: 40rem;
+                height: 40rem;
+                margin: 0 auto;
+                font-size: 1rem;
+            }
+            &__col-2{
+                height: 50rem;
+            }
+            &__col-3{
+                height: 50rem;
+                width: 100%;
+            }
+        }
+    }
+
 
     &__row-3{
         margin: 0 auto;
+        padding: 0 3rem;
         max-width: 114rem;
         display: flex;
         gap: 3rem;
@@ -213,6 +257,19 @@
             &:hover {
                 background-position: bottom;
             }
+        }
+        @media screen and (max-width: 768px) {
+            &__col-1{
+                width: 100%;
+            }
+            &__col-2{
+                width: 100%;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        &__row-3{
+            flex-direction: column-reverse;
         }
     }
 }

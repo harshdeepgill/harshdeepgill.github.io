@@ -3,36 +3,38 @@
     background-color: $black-dark;
 
     &>p{
-        text-transform: uppercase;
         text-align: center;
         color: $color-secondary;
-        font-size: 1.6rem;
-        letter-spacing: 2px;
-        line-height: 1.4;
+        font-family: MyFontThick;
+        font-size: 1.8rem;
         width: 70%;
         margin: 0 auto;
     }
 
     &__stats{
         display: flex;
+        flex-wrap: wrap;
         width: 60%;
         margin: 0 auto;
-        justify-content: space-between;
+        justify-content: center;
+        row-gap: 2rem;
         margin-top: 3rem;
 
         &__data{
             text-align: center;
+            margin-left: 1rem;
+            margin-right: 1rem;
 
             &__number{
-                font-size: 2.5rem;
+                font-size: 4.5rem;
                 color: $color-primary;
-                letter-spacing: 2px;
+                font-family: MyFontThin;
             }
 
             &__heading{
                 font-size: 1.2rem;
                 color: $color-secondary;
-                letter-spacing: 2px;
+                font-family: MyFontThick;
                 margin-top: 0.6rem;
             }
         }
@@ -53,9 +55,11 @@
         margin-bottom: 10rem;
 
         &__header{
+            font-family: MyFontThin;
             width: 95%;
             margin: 0 auto;
             margin-top: 2rem;
+            font-size: 2rem;
             padding: 3rem 2rem;
             display: flex;
             border-bottom: 1px solid rgb(205,205,205,0.4);
@@ -81,6 +85,8 @@
             }
         }
 
+        
+
         &__data{
             width: 95%;
             margin: 0 auto;
@@ -92,9 +98,9 @@
 
             &>p{
                 color: $color-secondary;
+                font-family: MyFontThick;
                 text-transform: uppercase;
                 font-size: 1.6rem;
-                letter-spacing: 2px;
 
             }
 
@@ -109,5 +115,37 @@
                 text-align: right;
             }
         }
+        @media screen and (max-width:768px) {
+            &__header{
+                display: none;
+            }
+            &__data{
+                flex-direction: column;
+                gap: 0.5rem;
+
+                &>p:nth-child(1){
+                    width: 100%;
+                    font-family: MyFontThin;
+                    font-size: 1.8rem;
+                }
+                &>p:nth-child(2){
+                    width: 100%;
+                    font-family: MyFontThick;
+                    font-size: 1.2rem;
+                }
+                &>p:nth-child(3){
+                    width: 100%;
+                    font-family: MyFontThin;
+                    font-size: 1rem;
+                    text-align: left;
+                }
+            }
+        }
     }
+
+    @media screen and (max-width: 768px) {
+        &>p{
+            width: 95%;
+        }
+      }
 }

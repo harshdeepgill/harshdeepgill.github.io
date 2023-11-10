@@ -5,6 +5,8 @@ import GreyLogo from './Sub_Components/GreyLogo'
 import styled from 'styled-components';
 import { BsDownload } from "react-icons/bs";
 import resume from "../Sass/resume.pdf"
+import { AiOutlineDownload } from 'react-icons/ai';
+import { DownloadIcon } from '@chakra-ui/icons';
 
 const variable = [
     {
@@ -49,14 +51,14 @@ const About = () => {
     <div id="about" className='about section about-main'>
         <Heading text={"About"} colorText={"me"}/>
         <p id="user-detail-intro">
-        A dedicated fullstack web developer, I bring passion, lifelong learning, and proficiency in the MERN stack to the table. My focus is on crafting robust, functional, and user-centric websites having attention to detail and a problem-solving mindset with hands-on experience on Git for version control. Quality and solution driven, skilled in and having hands-on experience of working with HTML, CSS, JavaScript, React, NodeJS and MongoDB. Highly resilient and focused on learning new techniques to build real world websites while facilitating the growth of self and that of the organization.
+        A dedicated fullstack web developer, I bring passion, lifelong learning, and proficiency in the MERN stack to the table. My focus is on crafting robust, functional, and user-centric websites having attention to detail and a problem solving mindset with hands on experience on Git for version control. Quality and solution driven, skilled in and having hands-on experience of working with HTML, CSS, JavaScript, React, NodeJS and MongoDB. Highly resilient and focused on learning new techniques to build real world websites while facilitating the growth of self and that of the organization.
         </p>
 
         <div className='about-main__stats'>
 
             <div className="about-main__stats__data">
                 <p className="about-main__stats__data__number">1500+</p>
-                <p className="about-main__stats__data__heading">hours coding</p>
+                <p className="about-main__stats__data__heading">Hours Coding</p>
             </div>
 
             <div className="about-main__stats__data">
@@ -66,7 +68,7 @@ const About = () => {
 
             <div className="about-main__stats__data">
                 <p className="about-main__stats__data__number">1000+</p>
-                <p className="about-main__stats__data__heading">DSA problems</p>
+                <p className="about-main__stats__data__heading">DSA Problems</p>
             </div>
         </div>
 
@@ -75,7 +77,7 @@ const About = () => {
         </HorizontalScroll>
 
         <div>
-        <BUTTON id="resume-button-2" ><a href={resume} download="resume" rel='noopener noreferrer'  id="resume-link-2"><p>Resume</p> <BsDownload/></a></BUTTON>
+        <BUTTON id="resume-button-2" ><a style={{display:"flex", alignItems: "center", textDecoration:"none", gap:"1rem", color: "rgb(22,22,22)"}} href={resume} download="resume" rel='noopener noreferrer'  id="resume-link-2"><p>Resume</p><DownloadIcon/></a></BUTTON>
         </div>
         <div className="about-main__secondary-heading">
             <p>Education</p>
@@ -160,8 +162,10 @@ text-align: center;
   text-transform: uppercase;
 
   &:hover {
-    box-shadow: 0px 3px 10px rgb(220,252,55);
-    transform: translateY(-5px);
+    box-shadow: 0 0 10px rgb(220,252,55), 0 0 40px rgb(220,252,55), 0 0 10px rgb(220,252,55);
+    background-color: rgb(220,252,55);
+    color: white;
+    transform: translateY(-3px);
     cursor: pointer;
   }
 `

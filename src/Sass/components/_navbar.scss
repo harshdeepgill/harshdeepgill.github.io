@@ -1,24 +1,64 @@
 .navbar-main{
     padding: 2rem 3rem 2rem 3rem;
     width: 100vw;
-    z-index: 2;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-image: linear-gradient(to bottom, rgba(22,22,22), rgba(22,22,22,0));
     position: fixed;
     font-family: MyFontThick;
+
+    &>.resume-burger-div{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    & .burger-menu{
+        display: none;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        font-size: 3rem;
+        color: $color-primary;
+        margin-bottom: 0.5rem;
+    }
+    @media screen and (max-width:768px) {
+        & .burger-menu{
+            display: inline-block;
+        }
+    }
+
     a{
         text-decoration: none;
         text-transform: uppercase;
         font-size: 1.2rem;
+        color: $color-secondary;
 
-        &:not(:first-child){
-            color: $color-secondary;
+
+        @media screen and (max-width:768px) {
+            &:not(:first-child){
+                display: none;
+            }
+        }
+        // &:not(:first-child){
+        //     color: $color-secondary;
+        // }
+    }
+    @media screen and (max-width:768px) {
+        a{
+            font-size: 1.5rem;
         }
     }
 
     &__logo{
         color: $color-primary;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .navbar-main{
+        z-index: 0;
     }
 }

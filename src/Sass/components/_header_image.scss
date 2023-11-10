@@ -9,6 +9,7 @@
 .main__header_image___inner{
     height: 70vh;
     background-image:  linear-gradient(to right, rgb(22,22,22,0.4), rgb(22,22,22,0.4)) ,url("https://firebasestorage.googleapis.com/v0/b/harshdeep-gill-portfolio-websi.appspot.com/o/header-image.jpg?alt=media&token=fb8d43ad-213b-49b2-8053-8a15b9bbe118&_gl=1*13itsi*_ga*OTcyNzU4NTcxLjE2OTQxMjAyNjM.*_ga_CW55HF8NVT*MTY5ODA3Njk0MS4zNS4xLjE2OTgwNzY5OTQuNy4wLjA.");
+    object-fit: cover;
     background-size: cover;
     background-position: top;
     filter: grayscale(0.8);

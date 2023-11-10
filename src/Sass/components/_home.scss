@@ -1,5 +1,5 @@
 .home-main{
-
+    overflow: hidden;
     &__content{
         width: 80%;
         margin-left: 10%;
@@ -56,16 +56,56 @@
                 & p{
                     display: inline-block;
                     width: 70%;
-                    font-size: 3rem;
+                    font-size: 2.5rem;
                     text-transform: uppercase;
+                    font-family: MyFontThick;
                     color: $color-secondary;
                     text-align: center;
                     position: absolute;
-                    top: 60vh;
-                    left: 30%;
+                    top: 62vh;
+                    left: 40%;
 
                     & span{
                         color: $color-primary;
+                    }
+                }
+            }
+            
+        }
+
+    }
+    @media screen and (max-width: 768px) {
+        &__content{
+            flex-direction: column;
+
+            &_1{
+
+
+                &--big_text{
+                    top: 4rem;
+                    transform: rotate(0) translate(10%,30%);
+                    position: inherit;
+                    font-size: 14rem;
+                }
+            }
+            &_2{
+                margin: 0 auto;
+                &__outer{
+                    margin: 0 auto;
+                    height: auto;
+                    &_1{
+                        width: 60%;
+                        margin: 0 auto;
+                        float: none;
+                        margin-top: 15rem;
+                    }
+
+                    &>p{
+                        position: static;
+                        display: block;
+                        width: 100%;
+                        margin: 0 auto;
+                        margin-top: 10rem;
                     }
                 }
             }

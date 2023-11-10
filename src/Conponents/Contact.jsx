@@ -1,19 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Heading from './Sub_Components/Heading';
 import { BsGithub, BsLinkedin, BsFillEnvelopeFill, BsFillTelephoneFill, BsDownload } from "react-icons/bs";
 import styled from 'styled-components';
 
-
+const initialState = {
+    name: "",
+    email: "",
+    text: ""
+}
 const Contact = () => {
+    const [formData, setFormData] = useState(initialState);
+
+    const handleChange = (e) => {
+        const {name, value} = e.target;
+
+        setFormData(prev => {
+            return {
+                ...prev,
+                [name]: value
+            }
+        })
+    }
+
+    const handleSubmit = () => {
+        
+    }
+
   return (
     <div id='contact' style={{backgroundColor: "rgb(22,22,22)", paddingTop: "5rem"}} className='contact-main'>
         <Heading text={"Contact"} colorText={"Me"}/>
 
         <div className="contact-main__links">
-            <a href='https://github.com/harshdeepgill'  id="contact-github" className="contact-main__links__link">
+            <a href='https://github.com/harshdeepgill' target='_blank' id="contact-github" className="contact-main__links__link">
                 <BsGithub/>
             </a>
-            <a href='https://www.linkedin.com/in/harshdeepgill/' className="contact-main__links__link" id="contact-linkedin">
+            <a href='https://www.linkedin.com/in/harshdeepgill/' target='_blank' className="contact-main__links__link" id="contact-linkedin">
                 <BsLinkedin/>
             </a>
             <A className="contact-main__links__link" id="contact-email">
@@ -30,10 +51,10 @@ const Contact = () => {
         </div>
 
         <div className="contact-main__form">
-            <input type="text" placeholder='Name' className="contact-main__name" />
-            <input type="text" placeholder='Email' className="contact-main__email" />
-            <textarea type="text" rows={"4"} placeholder='Message' className="contact-main__message" />
-            <button>Send Message</button>
+            <input name='name' onChange={handleChange} type="text" placeholder='Name' className="contact-main__name" />
+            <input name='email' onChange={handleChange} type="text" placeholder='Email' className="contact-main__email" />
+            <textarea name='text' onChange={handleChange} type="text" rows={"4"} placeholder='Message' className="contact-main__message" />
+            <button onClick={hanldeSubmit}>Send Message</button>
         </div>
     </div>
   )

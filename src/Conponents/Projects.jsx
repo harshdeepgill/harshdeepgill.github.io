@@ -41,8 +41,6 @@ const Projects = () => {
                     </div>
                 </div>
             </div>
-
-            
         </div>
 
 
@@ -51,7 +49,7 @@ const Projects = () => {
 
             <DIV spinVal={scrollFr*55} className="project-main__row-2__col-1">
                 <div>
-                    <h1>Let's Colaborate</h1>
+                    <h1><a href='#contact'>Let's Colaborate</a></h1>
                     <BsArrowDownRight style={{fontSize:"3rem"}}/>
                 </div>
             </DIV>
