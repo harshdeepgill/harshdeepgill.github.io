@@ -1,5 +1,6 @@
 .home-main{
     overflow: hidden;
+    height: 128vh;
     &__content{
         width: 80%;
         margin-left: 10%;
@@ -17,6 +18,7 @@
                 text-transform: uppercase;
                 position: absolute;
                 right: 0;
+                // z-index: 2;
                 // transform: translateX(-50%);
 
                 &>span:nth-child(1){

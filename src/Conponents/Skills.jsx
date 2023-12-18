@@ -42,6 +42,10 @@ const techStack = [
         source: "https://cdn.icon-icons.com/icons2/112/PNG/512/python_18894.png",
         name: "Python"
     },
+    {
+        source: "https://firebasestorage.googleapis.com/v0/b/harshdeep-gill-portfolio-websi.appspot.com/o/icon-openai.png?alt=media&token=f03363fa-d268-4f9c-af1c-fc52c4ca54ee",
+        name: "Open AI"
+    }
 ]
 
 const styling = [

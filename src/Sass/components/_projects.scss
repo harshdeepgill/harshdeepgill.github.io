@@ -103,7 +103,7 @@
             align-items: center;
             text-align: center;
             font-family: MyFontThin;
-            font-size: 2rem;
+            font-size: 1.6rem;
             &>div{
 
                 &>h1{
@@ -116,7 +116,7 @@
             }
         }
         &__col-2{
-            min-width: 29rem;
+            width: 26rem;
             height: 100%;
             border-radius: 20px;
             position: relative;
@@ -140,7 +140,7 @@
             }
         }
         &__col-3{
-            width: 29rem;
+            width: 26rem;
             height: 100%;
             border-radius: 20px;
             background-color: #fff;
@@ -185,6 +185,7 @@
             }
             &__col-2{
                 height: 50rem;
+                width: 100%;
             }
             &__col-3{
                 height: 50rem;
@@ -195,6 +196,172 @@
 
 
     &__row-3{
+        margin: 0 auto;
+        padding: 0 3rem;
+        max-width: 114rem;
+        display: flex;
+        gap: 3rem;
+        height: 75vh;
+        margin-bottom: 3rem;
+
+        &__col-1{
+            width: 46rem ;
+            height: 100%;
+            background-color: #fff;
+            border-radius: 20px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+
+
+            &>div{
+
+                &>h2{
+                    font-family: MyFontThin;
+                    font-size: 3rem;
+                }
+                &>p{
+                    font-family: MyFontThick;
+                    margin-top: 1rem;
+                    font-size: 1.3rem;
+                    letter-spacing: 2px;
+                }
+                &>div{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+            }
+        }
+
+        &__col-2{
+            width: 65rem ;
+            height: 100%;
+            position: relative;
+            border: 2px solid $color-secondary;
+            background-image: url("https://firebasestorage.googleapis.com/v0/b/harshdeep-gill-portfolio-websi.appspot.com/o/screencapture-festive-crayon-1023-one-vercel-app-arts-2023-11-25-15_01_13.png?alt=media&token=22786cff-dc9a-460b-b50e-4002e404557c");
+            background-size: cover;
+            background-position: top;
+            border-radius: 20px;
+            transition: all 9s ease;
+
+            &>div{
+                width: 30%;
+                position: absolute;
+                bottom: 3rem;
+                right: 3rem;
+                display: flex;
+                justify-content: space-between;
+            }
+            &:hover {
+                background-position: bottom;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            &__col-1{
+                width: 100%;
+                height: 50rem;
+            }
+            &__col-2{
+                width: 100%;
+                height: 50rem;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        &__row-3{
+            flex-direction: column;
+            height: auto;
+        }
+    }
+
+// last row
+    &__row-5{
+        margin: 0 auto;
+        padding: 0 3rem;
+        max-width: 114rem;
+        display: flex;
+        gap: 3rem;
+        height: 75vh;
+        margin-bottom: 3rem;
+
+        &__col-1{
+            width: 46rem ;
+            height: 100%;
+            background-color: #fff;
+            border-radius: 20px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+
+
+            &>div{
+
+                &>h2{
+                    font-family: MyFontThin;
+                    font-size: 3rem;
+                }
+                &>p{
+                    font-family: MyFontThick;
+                    margin-top: 1rem;
+                    font-size: 1.3rem;
+                    letter-spacing: 2px;
+                }
+                &>div{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+            }
+        }
+
+        &__col-2{
+            width: 65rem ;
+            height: 100%;
+            position: relative;
+            border: 2px solid $color-secondary;
+            background-image: url("https://firebasestorage.googleapis.com/v0/b/harshdeep-gill-portfolio-websi.appspot.com/o/Untitled%20design%20(1).png?alt=media&token=a7457d0f-3cc7-43f9-8f35-c4a84b21e472");
+            background-size: cover;
+            background-position: top;
+            border-radius: 20px;
+            transition: all 9s ease;
+
+            &>div{
+                width: 30%;
+                position: absolute;
+                bottom: 3rem;
+                right: 3rem;
+                display: flex;
+                justify-content: space-between;
+            }
+            &:hover {
+                background-position: bottom;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            &__col-1{
+                width: 100%;
+                height: 50rem;
+            }
+            &__col-2{
+                width: 100%;
+                height: 50rem;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        &__row-5{
+            flex-direction: column;
+            height: auto;
+        }
+    }
+
+
+    &__row-4{
         margin: 0 auto;
         padding: 0 3rem;
         max-width: 114rem;
@@ -261,18 +428,23 @@
         @media screen and (max-width: 768px) {
             &__col-1{
                 width: 100%;
+                height: 50rem;
             }
             &__col-2{
                 width: 100%;
+                height: 50rem;
             }
         }
     }
     @media screen and (max-width: 768px) {
-        &__row-3{
+        &__row-4{
             flex-direction: column-reverse;
+            height: auto;
         }
     }
 }
+
+
 
 .project-main-git-link,
 .project-main-deploy-link {

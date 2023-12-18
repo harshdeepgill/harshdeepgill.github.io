@@ -18,8 +18,8 @@ const Github = () => {
             <img id="github-top-langs" class="github-top-langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=harshdeepgill&amp;theme=merko&amp;hide_border=false&amp;include_all_commits=true&amp;count_private=true&amp;border_radius=10"/>
             </div>
         </div>
-        <div className="github-main__calender" style={{marginTop: "5rem"}}>
-            <GitHubCalendar className="react-activity-calendar" style={{color: "white", fontFamily: "MyFontThick", fontSize: "0.5rem"}} username="harshdeepgill" />
+        <div className="github-main__calender">
+            <GitHubCalendar className="react-activity-calendar" style={{margin: "0 auto",marginTop: "5rem",color: "white", fontFamily: "MyFontThick", fontSize: "0.5rem"}} username="harshdeepgill" />
         </div>
     </div>
   )

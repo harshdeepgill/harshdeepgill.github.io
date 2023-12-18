@@ -47,6 +47,11 @@ const variable = [
 
 
 const About = () => {
+
+    const hanldeResume = () => {
+        const redirectLink = "https://drive.google.com/file/d/1E6lslPhmw2lqmSeA7N_HMtRNm-Xy7S-Q/view?usp=sharing";
+        window.open(redirectLink, "_blank");
+    }
   return (
     <div id="about" className='about section about-main'>
         <Heading text={"About"} colorText={"me"}/>
@@ -77,7 +82,7 @@ const About = () => {
         </HorizontalScroll>
 
         <div>
-        <BUTTON id="resume-button-2" ><a style={{display:"flex", alignItems: "center", textDecoration:"none", gap:"1rem", color: "rgb(22,22,22)"}} href={resume} download="resume" rel='noopener noreferrer'  id="resume-link-2"><p>Resume</p><DownloadIcon/></a></BUTTON>
+        <BUTTON id="resume-button-2" onClick={hanldeResume}><a style={{display:"flex", alignItems: "center", textDecoration:"none", gap:"1rem", color: "rgb(22,22,22)"}} href={resume} download="Harshdeep-Gill-Resume" rel='noopener noreferrer'  id="resume-link-2"><p>Resume</p><DownloadIcon/></a></BUTTON>
         </div>
         <div className="about-main__secondary-heading">
             <p>Education</p>

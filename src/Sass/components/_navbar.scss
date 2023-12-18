@@ -1,7 +1,7 @@
 .navbar-main{
     padding: 2rem 3rem 2rem 3rem;
     width: 100vw;
-    z-index: 1;
+    z-index: 3;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,11 +54,5 @@
 
     &__logo{
         color: $color-primary;
-    }
-}
-
-@media screen and (max-width:768px) {
-    .navbar-main{
-        z-index: 0;
     }
 }

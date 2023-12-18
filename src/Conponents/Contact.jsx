@@ -1,15 +1,32 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Heading from './Sub_Components/Heading';
 import { BsGithub, BsLinkedin, BsFillEnvelopeFill, BsFillTelephoneFill, BsDownload } from "react-icons/bs";
 import styled from 'styled-components';
+import emailjs from 'emailjs-com';
 
 const initialState = {
-    name: "",
-    email: "",
-    text: ""
+    from_name: "",
+    from_email: "",
+    message: ""
 }
 const Contact = () => {
     const [formData, setFormData] = useState(initialState);
+
+    const [mail, setMail] = useState(false);
+
+    const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_bw4q6wn', 'template_b504ve6', form.current, 'uFDRCcJs8n5zq5K1J')
+      .then((result) => {
+          setFormData(initialState);
+          setMail(true);
+      }, (error) => {
+        alert("Error in sending message, please try again.");
+      });
+  };
 
     const handleChange = (e) => {
         const {name, value} = e.target;
@@ -20,11 +37,7 @@ const Contact = () => {
                 [name]: value
             }
         })
-    }
-
-    const handleSubmit = () => {
-        
-    }
+    }    
 
   return (
     <div id='contact' style={{backgroundColor: "rgb(22,22,22)", paddingTop: "5rem"}} className='contact-main'>
@@ -50,11 +63,17 @@ const Contact = () => {
             </a>
         </div>
 
-        <div className="contact-main__form">
-            <input name='name' onChange={handleChange} type="text" placeholder='Name' className="contact-main__name" />
-            <input name='email' onChange={handleChange} type="text" placeholder='Email' className="contact-main__email" />
-            <textarea name='text' onChange={handleChange} type="text" rows={"4"} placeholder='Message' className="contact-main__message" />
-            <button onClick={hanldeSubmit}>Send Message</button>
+        {mail? <div className='contact-main__success' style={{textAlign:"center", color:"white" }}><h1>Mail Successfully Sent!</h1><p>Thank you for showing interest.</p></div>: <form ref={form} onSubmit={sendEmail} className="contact-main__form">
+            <input name='from_name' onChange={handleChange} value={formData.from_name} type="text" placeholder='Name' className="contact-main__name" />
+            <input name='from_email' onChange={handleChange} value={formData.from_email} type="text" placeholder='Email' className="contact-main__email" />
+            <textarea name='message' onChange={handleChange} value={formData.message} type="text" rows={"4"} placeholder='Message' className="contact-main__message" />
+            <button type='submit'>Send Message</button>
+        </form>}
+        
+
+        <div className='contact-main__footer'>
+            <div>© 2023</div>
+            <div>Harshdeep Gill</div>
         </div>
     </div>
   )
