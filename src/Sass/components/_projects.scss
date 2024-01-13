@@ -442,6 +442,88 @@
             height: auto;
         }
     }
+
+
+    &__row-6{
+        margin: 0 auto;
+        padding: 0 3rem;
+        max-width: 114rem;
+        display: flex;
+        gap: 3rem;
+        height: 85vh;
+        margin-bottom: 3rem;
+
+        
+
+        &__col-1{
+            width: 40rem;
+            height: 100%;
+            background-color: #fff;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+
+            &>div{
+
+                &>h2{
+                    font-family: MyFontThin;
+                    font-size: 3rem;
+                }
+                &>p{
+                    font-family: MyFontThick;
+                    margin-top: 1rem;
+                    font-size: 1.3rem;
+                    letter-spacing: 2px;
+                }
+                &>div{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+            }
+            
+        }
+
+        &__col-2{
+            width: 71rem;
+            height: 100%;
+            position: relative;
+            background-image: url("https://firebasestorage.googleapis.com/v0/b/harshdeep-gill-portfolio-websi.appspot.com/o/screencapture-harshdeepgill-github-io-2024-01-13-15_47_58.png?alt=media&token=7f9aac6d-1655-4a5a-8e91-106627ad43af");
+            background-size: cover;
+            background-position: top;
+            border-radius: 20px;
+            border: 2px solid $color-secondary;
+            transition: all 6s ease;
+
+
+            &>div{
+                width: 30%;
+                position: absolute;
+                bottom: 3rem;
+                right: 3rem;
+                display: flex;
+                justify-content: space-between;
+            }
+            &:hover {
+                background-position: bottom;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            &__col-1{
+                width: 100%;
+            }
+            &__col-2{
+                width: 100%;
+            }
+        }
+    }
+    @media screen and (max-width:768px) {
+        &__row-1{
+            flex-direction: column-reverse;
+        }
+    }
 }
 
 

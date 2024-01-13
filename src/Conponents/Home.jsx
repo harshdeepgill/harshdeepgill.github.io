@@ -41,7 +41,7 @@ const SPAN2 = styled.span`
   transform: translateX(${props => props.span2}%);
 
   @media screen and (max-width: 768px) {
-    transform: translateX(${props => (props.span2)*20 - 400}%);
+    transform: translateX(${props => (props.span2)*(-20) - 680}%);
   }
 `
 

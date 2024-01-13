@@ -77,6 +77,35 @@ const Projects = () => {
         </div>
 
 
+        <div className="project-card project-main__row-6">
+
+            <div className="project-main__row-6__col-1">
+                <div>
+                    <h2 className='project-title' style={{textAlign:"center", letterSpacing:"3px"}}>#PORTFOLIO</h2>
+                    <p className='project-description'>This Portfolio is designed by myself, to showcase all the skil-set that I have gained so far. I've implemented BEM Architecture with the help of SCSS for easier debugging and updating.</p>
+                    <p>#BEM Architecture #Personal-Project #Online-Presence #Mail-JS #Form-JS</p>
+                    <div className='project-tech-stack'>
+                        <RoundLogoSmall name="React" source="https://cdn.icon-icons.com/icons2/2415/PNG/512/react_original_logo_icon_146374.png"/>
+                        <RoundLogoSmall name="Redux" source="https://cdn.icon-icons.com/icons2/2415/PNG/512/redux_original_logo_icon_146365.png"/>
+                        <RoundLogoSmall name="SCSS" source="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_sass_icon_130182.png"/>
+                        <RoundLogoSmall name="Styled Components" source="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_styled_icon_130142.png"/>
+                    </div>
+                </div>
+            </div>
+
+            <div className="project-main__row-6__col-2">
+                <div>
+                    <div className="project-main-git-link project-main__row-6__col-2__git">
+                    <a target='_blank' className="project-github-link" href="https://github.com/harshdeepgill/harshdeepgill.github.io"><FaGithub/></a>
+                    </div>
+                    <div className="project-main-git-link project-main__row-6__col-2__link">
+                    <a target='_blank' className="project-deployed-link" href="https://harshdeepgill.github.io"><FaGlobe/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <div className="project-card project-main__row-2">
 
             <DIV spinVal={scrollFr*55} className="project-main__row-2__col-1">

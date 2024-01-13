@@ -8,7 +8,7 @@ const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const hanldeResume = () => {
-    const redirectLink = "https://drive.google.com/file/d/1E6lslPhmw2lqmSeA7N_HMtRNm-Xy7S-Q/view?usp=sharing";
+    const redirectLink = "https://drive.google.com/file/d/1SflmHSR33j-j1wXeW51C5vJVMWDJZtr2/view?usp=sharing";
     window.open(redirectLink, "_blank");
 }
 
