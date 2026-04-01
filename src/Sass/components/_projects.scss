@@ -1,554 +1,245 @@
-.project-main{
+.project-main {
     padding: 8rem 0;
     background-color: $black-dark;
-    
-    &__row-1{
-        margin: 0 auto;
-        padding: 0 3rem;
-        max-width: 114rem;
-        display: flex;
-        gap: 3rem;
+}
+
+// ─── Generic Project Card ────────────────────────────────────────────────────
+
+.project-card {
+    margin: 0 auto;
+    padding: 0 3rem;
+    max-width: 114rem;
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 3rem;
+
+    // Large variant: taller card with wider screenshot (e.g. ONFLICK, Portfolio)
+    &--large {
         height: 85vh;
-        margin-bottom: 3rem;
 
-        
-
-        &__col-1{
+        .project-card__info {
             width: 40rem;
-            height: 100%;
-            background-color: #fff;
-            border-radius: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 2rem;
-
-            &>div{
-
-                &>h2{
-                    font-family: MyFontThin;
-                    font-size: 3rem;
-                }
-                &>p{
-                    font-family: MyFontThick;
-                    margin-top: 1rem;
-                    font-size: 1.3rem;
-                    letter-spacing: 2px;
-                }
-                &>div{
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                }
-            }
-            
         }
-
-        &__col-2{
-            width: 71rem;
-            height: 100%;
-            position: relative;
-            background-image: url("https://firebasestorage.googleapis.com/v0/b/harshdeep-gill-portfolio-websi.appspot.com/o/screencapture-decisive-duck-1364-9rnayblsd-vk10082000-vercel-app-2023-10-26-17_54_23.png?alt=media&token=fe25a2b5-651c-4ab0-bf08-8d6c9708e7b6&_gl=1*dr2dt2*_ga*OTcyNzU4NTcxLjE2OTQxMjAyNjM.*_ga_CW55HF8NVT*MTY5ODY3MzAyOC40NC4xLjE2OTg2NzMwNjUuMjMuMC4w");
-            background-size: cover;
-            background-position: top;
-            border-radius: 20px;
-            border: 2px solid $color-secondary;
-            transition: all 6s ease;
-
-
-            &>div{
-                width: 30%;
-                position: absolute;
-                bottom: 3rem;
-                right: 3rem;
-                display: flex;
-                justify-content: space-between;
-            }
-            &:hover {
-                background-position: bottom;
-            }
-        }
-        @media screen and (max-width: 768px) {
-            &__col-1{
-                width: 100%;
-            }
-            &__col-2{
-                width: 100%;
-            }
-        }
-    }
-    @media screen and (max-width:768px) {
-        &__row-1{
-            flex-direction: column-reverse;
+        .project-card__screenshot {
+            flex: 1;
         }
     }
 
+    // Standard variant: medium height (e.g. Art Sphere, MoneyMingle, AI Interviewer)
+    &--standard {
+        height: 75vh;
 
-    &__row-2{
-        margin: 0 auto;
-        padding: 0 3rem;
-        max-width: 114rem;
+        .project-card__info {
+            width: 46rem;
+        }
+        .project-card__screenshot {
+            flex: 1;
+        }
+    }
+
+    // Info panel (white card with project details)
+    &__info {
+        height: 100%;
+        background-color: #fff;
+        border-radius: 20px;
         display: flex;
-        gap: 3rem;
-        height: 50rem;
-        margin-bottom: 3rem;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 2rem;
 
-        &__col-1{
-            width: 50rem;
-            height: 100%;
-            clip-path: circle(50% at 50% 50%);
-            background-color: $color-primary;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+        & > div > h2 {
             font-family: MyFontThin;
-            font-size: 1.6rem;
-            &>div{
-
-                &>h1{
-                    margin-top: 5rem;
-                    &>a{
-                        text-decoration: none;
-                        color: $black-dark;
-                    }
-                }
-            }
+            font-size: 3rem;
+            text-align: center;
+            letter-spacing: 3px;
         }
-        &__col-2{
-            width: 26rem;
-            height: 100%;
-            border-radius: 20px;
-            position: relative;
-            border: 2px solid $color-secondary;
-            background-image: url("https://firebasestorage.googleapis.com/v0/b/harshdeep-gill-portfolio-websi.appspot.com/o/screencapture-hilarious-paletas-40d5fe-netlify-app-2023-10-30-20_01_33.png?alt=media&token=ede55c9e-dd21-4890-bf32-ccf9d92c3e45&_gl=1*1g27xaq*_ga*OTcyNzU4NTcxLjE2OTQxMjAyNjM.*_ga_CW55HF8NVT*MTY5ODY3NjMwOS40NS4xLjE2OTg2NzYzMzEuMzguMC4w");
-            background-size: cover;
-            background-position: top;
-            border-radius: 20px;
-            transition: all 4s ease;
-
-            &>div{
-                width: 50%;
-                position: absolute;
-                bottom: 3rem;
-                right: 3rem;
-                display: flex;
-                justify-content: space-between;
-            }
-            &:hover {
-                background-position: bottom;
-            }
+        & > div > p {
+            font-family: MyFontThick;
+            margin-top: 1rem;
+            font-size: 1.3rem;
+            letter-spacing: 2px;
         }
-        &__col-3{
-            width: 26rem;
-            height: 100%;
-            border-radius: 20px;
-            background-color: #fff;
-            border-radius: 20px;
+        &__tech-stack {
             display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 2rem;
-
-
-            &>div{
-
-                &>h2{
-                    font-family: MyFontThin;
-                    font-size: 2.5rem;
-                }
-                &>p{
-                    font-family: MyFontThick;
-                    margin-top: 1rem;
-                    font-size: 1.3rem;
-                    letter-spacing: 2px;
-                }
-                &>div{
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                }
-            }
+            flex-wrap: wrap;
+            justify-content: center;
         }
     }
 
-    @media screen and (max-width:768px) {
-        &__row-2{
-            flex-direction: column;
-            height: auto;
+    // Screenshot panel (background image that scrolls on hover)
+    &__screenshot {
+        height: 100%;
+        position: relative;
+        border: 2px solid $color-secondary;
+        background-size: cover;
+        background-position: top;
+        border-radius: 20px;
+        transition: all 6s ease;
 
-            &__col-1{
-                max-width: 40rem;
-                height: 40rem;
-                margin: 0 auto;
-                font-size: 1rem;
-            }
-            &__col-2{
-                height: 50rem;
-                width: 100%;
-            }
-            &__col-3{
-                height: 50rem;
-                width: 100%;
-            }
+        &:hover {
+            background-position: bottom;
+        }
+
+        &__links {
+            position: absolute;
+            bottom: 3rem;
+            right: 3rem;
+            display: flex;
+            gap: 1rem;
         }
     }
 
-
-    &__row-3{
-        margin: 0 auto;
-        padding: 0 3rem;
-        max-width: 114rem;
-        display: flex;
-        gap: 3rem;
-        height: 75vh;
-        margin-bottom: 3rem;
-
-        &__col-1{
-            width: 46rem ;
-            height: 100%;
-            background-color: #fff;
-            border-radius: 20px;
-            border-radius: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 2rem;
-
-
-            &>div{
-
-                &>h2{
-                    font-family: MyFontThin;
-                    font-size: 3rem;
-                }
-                &>p{
-                    font-family: MyFontThick;
-                    margin-top: 1rem;
-                    font-size: 1.3rem;
-                    letter-spacing: 2px;
-                }
-                &>div{
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                }
-            }
-        }
-
-        &__col-2{
-            width: 65rem ;
-            height: 100%;
-            position: relative;
-            border: 2px solid $color-secondary;
-            background-image: url("https://firebasestorage.googleapis.com/v0/b/harshdeep-gill-portfolio-websi.appspot.com/o/screencapture-festive-crayon-1023-one-vercel-app-arts-2023-11-25-15_01_13.png?alt=media&token=22786cff-dc9a-460b-b50e-4002e404557c");
-            background-size: cover;
-            background-position: top;
-            border-radius: 20px;
-            transition: all 9s ease;
-
-            &>div{
-                width: 30%;
-                position: absolute;
-                bottom: 3rem;
-                right: 3rem;
-                display: flex;
-                justify-content: space-between;
-            }
-            &:hover {
-                background-position: bottom;
-            }
-        }
+    // Responsive: screenshot always on top on mobile
+    // Non-reversed: info first in DOM → column-reverse puts screenshot on top
+    &--large,
+    &--standard {
         @media screen and (max-width: 768px) {
-            &__col-1{
-                width: 100%;
-                height: 50rem;
-            }
-            &__col-2{
-                width: 100%;
-                height: 50rem;
-            }
-        }
-    }
-    @media screen and (max-width: 768px) {
-        &__row-3{
-            flex-direction: column;
-            height: auto;
-        }
-    }
-
-// last row
-    &__row-5{
-        margin: 0 auto;
-        padding: 0 3rem;
-        max-width: 114rem;
-        display: flex;
-        gap: 3rem;
-        height: 75vh;
-        margin-bottom: 3rem;
-
-        &__col-1{
-            width: 46rem ;
-            height: 100%;
-            background-color: #fff;
-            border-radius: 20px;
-            border-radius: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 2rem;
-
-
-            &>div{
-
-                &>h2{
-                    font-family: MyFontThin;
-                    font-size: 3rem;
-                }
-                &>p{
-                    font-family: MyFontThick;
-                    margin-top: 1rem;
-                    font-size: 1.3rem;
-                    letter-spacing: 2px;
-                }
-                &>div{
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                }
-            }
-        }
-
-        &__col-2{
-            width: 65rem ;
-            height: 100%;
-            position: relative;
-            border: 2px solid $color-secondary;
-            background-image: url("https://firebasestorage.googleapis.com/v0/b/harshdeep-gill-portfolio-websi.appspot.com/o/Untitled%20design%20(1).png?alt=media&token=a7457d0f-3cc7-43f9-8f35-c4a84b21e472");
-            background-size: cover;
-            background-position: top;
-            border-radius: 20px;
-            transition: all 9s ease;
-
-            &>div{
-                width: 30%;
-                position: absolute;
-                bottom: 3rem;
-                right: 3rem;
-                display: flex;
-                justify-content: space-between;
-            }
-            &:hover {
-                background-position: bottom;
-            }
-        }
-        @media screen and (max-width: 768px) {
-            &__col-1{
-                width: 100%;
-                height: 50rem;
-            }
-            &__col-2{
-                width: 100%;
-                height: 50rem;
-            }
-        }
-    }
-    @media screen and (max-width: 768px) {
-        &__row-5{
-            flex-direction: column;
-            height: auto;
-        }
-    }
-
-
-    &__row-4{
-        margin: 0 auto;
-        padding: 0 3rem;
-        max-width: 114rem;
-        display: flex;
-        gap: 3rem;
-        height: 75vh;
-        margin-bottom: 3rem;
-
-        &__col-1{
-            width: 46rem ;
-            height: 100%;
-            background-color: #fff;
-            border-radius: 20px;
-            border-radius: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 2rem;
-
-
-            &>div{
-
-                &>h2{
-                    font-family: MyFontThin;
-                    font-size: 3rem;
-                }
-                &>p{
-                    font-family: MyFontThick;
-                    margin-top: 1rem;
-                    font-size: 1.3rem;
-                    letter-spacing: 2px;
-                }
-                &>div{
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                }
-            }
-        }
-
-        &__col-2{
-            width: 65rem ;
-            height: 100%;
-            position: relative;
-            border: 2px solid $color-secondary;
-            background-image: url("https://firebasestorage.googleapis.com/v0/b/harshdeep-gill-portfolio-websi.appspot.com/o/screencapture-127-0-0-1-5500-index-html-2023-10-30-20_33_49.png?alt=media&token=c7ae4037-03f8-402f-acac-b56f100b745a&_gl=1*1hoeces*_ga*OTcyNzU4NTcxLjE2OTQxMjAyNjM.*_ga_CW55HF8NVT*MTY5ODY3ODI1MC40Ni4xLjE2OTg2NzgyNjUuNDUuMC4w");
-            background-size: cover;
-            background-position: top;
-            border-radius: 20px;
-            transition: all 9s ease;
-
-            &>div{
-                width: 30%;
-                position: absolute;
-                bottom: 3rem;
-                right: 3rem;
-                display: flex;
-                justify-content: space-between;
-            }
-            &:hover {
-                background-position: bottom;
-            }
-        }
-        @media screen and (max-width: 768px) {
-            &__col-1{
-                width: 100%;
-                height: 50rem;
-            }
-            &__col-2{
-                width: 100%;
-                height: 50rem;
-            }
-        }
-    }
-    @media screen and (max-width: 768px) {
-        &__row-4{
             flex-direction: column-reverse;
             height: auto;
+
+            .project-card__info,
+            .project-card__screenshot {
+                width: 100% !important;
+                height: 50rem;
+            }
         }
     }
 
-
-    &__row-6{
-        margin: 0 auto;
-        padding: 0 3rem;
-        max-width: 114rem;
-        display: flex;
-        gap: 3rem;
-        height: 85vh;
-        margin-bottom: 3rem;
-
-        
-
-        &__col-1{
-            width: 40rem;
-            height: 100%;
-            background-color: #fff;
-            border-radius: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 2rem;
-
-            &>div{
-
-                &>h2{
-                    font-family: MyFontThin;
-                    font-size: 3rem;
-                }
-                &>p{
-                    font-family: MyFontThick;
-                    margin-top: 1rem;
-                    font-size: 1.3rem;
-                    letter-spacing: 2px;
-                }
-                &>div{
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                }
-            }
-            
-        }
-
-        &__col-2{
-            width: 71rem;
-            height: 100%;
-            position: relative;
-            background-image: url("https://firebasestorage.googleapis.com/v0/b/harshdeep-gill-portfolio-websi.appspot.com/o/screencapture-harshdeepgill-github-io-2024-01-13-15_47_58.png?alt=media&token=7f9aac6d-1655-4a5a-8e91-106627ad43af");
-            background-size: cover;
-            background-position: top;
-            border-radius: 20px;
-            border: 2px solid $color-secondary;
-            transition: all 6s ease;
-
-
-            &>div{
-                width: 30%;
-                position: absolute;
-                bottom: 3rem;
-                right: 3rem;
-                display: flex;
-                justify-content: space-between;
-            }
-            &:hover {
-                background-position: bottom;
-            }
-        }
+    // Reversed: screenshot first in DOM → column keeps screenshot on top
+    &--reversed {
         @media screen and (max-width: 768px) {
-            &__col-1{
-                width: 100%;
-            }
-            &__col-2{
-                width: 100%;
-            }
-        }
-    }
-    @media screen and (max-width:768px) {
-        &__row-1{
-            flex-direction: column-reverse;
+            flex-direction: column;
         }
     }
 }
 
+// ─── Special WandaWe / "Let's Collaborate" Row ──────────────────────────────
 
+.project-main__row-2 {
+    margin: 0 auto;
+    padding: 0 3rem;
+    max-width: 114rem;
+    display: flex;
+    gap: 3rem;
+    height: 50rem;
+    margin-bottom: 3rem;
+
+    &__col-1 {
+        width: 50rem;
+        height: 100%;
+        clip-path: circle(50% at 50% 50%);
+        background-color: $color-primary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: MyFontThin;
+        font-size: 1.6rem;
+
+        & > div > h1 {
+            margin-top: 5rem;
+
+            & > a {
+                text-decoration: none;
+                color: $black-dark;
+            }
+        }
+    }
+
+    &__col-2 {
+        width: 26rem;
+        height: 100%;
+        position: relative;
+        border: 2px solid $color-secondary;
+        background-size: cover;
+        background-position: top;
+        border-radius: 20px;
+        transition: all 4s ease;
+
+        &:hover {
+            background-position: bottom;
+        }
+
+        & > div {
+            width: 50%;
+            position: absolute;
+            bottom: 3rem;
+            right: 3rem;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__col-3 {
+        width: 26rem;
+        height: 100%;
+        background-color: #fff;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 2rem;
+
+        & > div > h2 {
+            font-family: MyFontThin;
+            font-size: 2.5rem;
+        }
+        & > div > p {
+            font-family: MyFontThick;
+            margin-top: 1rem;
+            font-size: 1.3rem;
+            letter-spacing: 2px;
+        }
+        & > div > div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        height: auto;
+
+        &__col-1 {
+            max-width: 40rem;
+            height: 40rem;
+            margin: 0 auto;
+            font-size: 1rem;
+        }
+        &__col-2 {
+            height: 50rem;
+            width: 100%;
+        }
+        &__col-3 {
+            height: 50rem;
+            width: 100%;
+        }
+    }
+}
+
+// ─── Link Icon Buttons (used in both ProjectCard and row-2) ─────────────────
 
 .project-main-git-link,
 .project-main-deploy-link {
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
-    background-color: rgb(255,255,255,0.6);
+    background-color: rgba(255, 255, 255, 0.6);
     font-size: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    &>a{
+    & > a {
         text-decoration: none;
         display: flex;
         justify-content: center;
         align-items: center;
         color: $black-dark;
-        &:hover{
-            color:$color-primary;
+
+        &:hover {
+            color: $color-primary;
         }
     }
-
-    
 }
